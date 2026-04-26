@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+<title>Virendra Pal</title>
+<meta name="description" content="">
+<meta name="author" content="Virendra Kumar Pal">
+<meta property="og:title" content="Virendra Pal">
+<meta property="og:description" content="">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0d14;
+    --bg-elev: #11141d;
+    --bg-card: #141823;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --text: #e8e9ed;
+    --text-muted: #8b92a6;
+    --text-dim: #5d6478;
+    --accent: #d4a056;
+    --accent-dim: #b58748;
+    --accent-soft: rgba(212, 160, 86, 0.12);
+    --max-width: 1180px;
+    --gutter: clamp(20px, 5vw, 60px);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  /* Subtle texture & ambient gradient */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 160, 86, 0.08), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 90% 90%, rgba(93, 169, 163, 0.04), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  main, nav, footer { position: relative; z-index: 1; }
+
+  /* Typography */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; }
+  h1 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); }
+  h2 { font-size: clamp(1.9rem, 3.6vw, 3.1rem); }
+  h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 600; }
+  h4 { font-size: 1.1rem; font-family: var(--sans); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+  p { color: var(--text-muted); max-width: 65ch; }
+  a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: var(--text); }
+
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Navigation */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    padding: 18px 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(10, 13, 20, 0.7);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    transition: padding 0.3s ease;
+  }
+  nav.scrolled { padding: 12px 0; }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--text-muted); font-size: 0.92rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--text); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* Hero */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 80px;
+    position: relative;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    padding: 6px 14px;
+    border: 1px solid var(--accent-soft);
+    background: var(--accent-soft);
+    border-radius: 100px;
+  }
+  #hero h1 {
+    margin-bottom: 28px;
+    background: linear-gradient(180deg, #ffffff 0%, #b8bcc8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  #hero h1 em {
+    font-style: italic;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dim) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-tagline {
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 720px;
+    margin-bottom: 44px;
+    line-height: 1.6;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 40px;
+  }
+  .hero-meta .pill {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: var(--bg-elev);
+  }
+  .hero-meta .pill strong { color: var(--text); font-weight: 600; }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 26px;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover { background: transparent; color: var(--accent); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Section base */
+  section {
+    padding: 110px 0;
+    position: relative;
+  }
+  .section-header { margin-bottom: 64px; max-width: 780px; }
+  .section-header .eyebrow { margin-bottom: 18px; }
+  .section-header h2 { color: var(--text); margin-bottom: 18px; }
+  .section-header p { font-size: 1.05rem; }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(.16,.84,.44,1), transform 0.8s cubic-bezier(.16,.84,.44,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Thesis section */
+  #thesis { padding: 80px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-elev); }
+  .thesis-quote {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+    max-width: 920px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .thesis-quote em { color: var(--accent); font-style: italic; font-weight: 500; }
+  .thesis-attrib {
+    text-align: center;
+    margin-top: 26px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* Timeline / Spine — the centerpiece */
+  #spine { padding: 130px 0; }
+  .timeline {
+    position: relative;
+    margin-top: 60px;
+    padding-left: 4px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+    height: var(--scroll-progress, 0%);
+    transition: height 0.1s linear;
+    box-shadow: 0 0 16px rgba(212, 160, 86, 0.4);
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 56px;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item .dot {
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--border-strong);
+    transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+  }
+  .timeline-item.visible .dot {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 6px var(--accent-soft);
+  }
+  .timeline-item .year {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .timeline-item h3 {
+    color: var(--text);
+    margin-bottom: 4px;
+    font-family: var(--sans);
+    font-size: 1.18rem;
+    font-weight: 600;
+  }
+  .timeline-item .where {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .timeline-item p { font-size: 0.96rem; }
+  .timeline-item .ahead {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  /* Now Shipping cards */
+  #now { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .now-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .now-card {
+    padding: 36px 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .now-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, var(--accent-soft) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .now-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .now-card:hover::before { opacity: 1; }
+  .now-card .num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .now-card h3 {
+    color: var(--text);
+    margin-bottom: 14px;
+    font-family: var(--sans);
+    font-size: 1.18rem;
+    font-weight: 600;
+  }
+  .now-card p { font-size: 0.96rem; }
+
+  /* Operating principles */
+  #philosophy .principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 56px 48px;
+    margin-top: 56px;
+  }
+  .principle .num {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .principle h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--text);
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+  .principle p { font-size: 0.98rem; }
+
+  /* Org-builder section (twin to philosophy, with stats) */
+  #orgs { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .orgs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-top: 56px;
+    align-items: start;
+  }
+  @media (max-width: 860px) { .orgs-row { grid-template-columns: 1fr; gap: 56px; } }
+  .org-block {
+    border-left: 1px solid var(--border-strong);
+    padding-left: 32px;
+  }
+  .org-block .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .org-block h3 {
+    font-family: var(--sans);
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .org-block .duration {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+  }
+  .org-block p { font-size: 0.98rem; margin-bottom: 18px; }
+  .org-block .promotions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+  }
+  .org-block .promotions span { color: var(--accent); }
+  .org-block ul {
+    list-style: none;
+    padding: 0;
+  }
+  .org-block li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 0.93rem;
+    color: var(--text-muted);
+  }
+  .org-block li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* Vouched — single elite pull quote */
+  #vouched {
+    padding: 110px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+  }
+  #vouched .eyebrow { margin-bottom: 44px; }
+  .vouch-quote {
+    font-family: var(--serif);
+    font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 880px;
+    margin: 0 auto 44px;
+    position: relative;
+    padding: 0 24px;
+  }
+  .vouch-quote::before {
+    content: '\201C';
+    position: absolute;
+    left: -8px;
+    top: -50px;
+    font-family: var(--serif);
+    font-size: 6rem;
+    color: var(--accent);
+    line-height: 1;
+    font-style: normal;
+    opacity: 0.5;
+  }
+  .vouch-attrib {
+    text-align: center;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .vouch-attrib strong {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 7px;
+    letter-spacing: 0.16em;
+  }
+  .vouch-attrib .role {
+    display: block;
+    color: var(--text-muted);
+    letter-spacing: 0.14em;
+  }
+  .vouch-attrib .rel {
+    display: block;
+    margin-top: 14px;
+    color: var(--text-dim);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    opacity: 0.85;
+  }
+  .vouch-quote.vouch-secondary {
+    font-size: clamp(1.15rem, 1.75vw, 1.45rem);
+    max-width: 720px;
+  }
+  .vouch-quote.vouch-secondary::before {
+    font-size: 4.6rem;
+    left: -6px;
+    top: -38px;
+    opacity: 0.45;
+  }
+  .vouch-divider {
+    width: 56px;
+    height: 1px;
+    background: var(--border-strong);
+    margin: 76px auto 64px;
+    opacity: 0.7;
+  }
+  .vouch-attrib.vouch-attrib-secondary { font-size: 0.76rem; }
+  .vouch-attrib.vouch-attrib-secondary strong { font-size: 0.82rem; }
+
+  /* On the platforms — corporate + public-record attribution pair, asymmetric */
+  #platforms {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+  }
+  #platforms .eyebrow { margin-bottom: 16px; }
+  .platforms-bridge {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0 auto 70px;
+    letter-spacing: 0.02em;
+    max-width: 560px;
+  }
+  .platforms-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text);
+    margin: 0 auto 28px;
+    position: relative;
+    padding: 0 24px;
+    line-height: 1.5;
+  }
+  .platforms-quote::before {
+    content: '\201C';
+    position: absolute;
+    font-family: var(--serif);
+    color: var(--accent);
+    line-height: 1;
+    font-style: normal;
+    opacity: 0.5;
+  }
+  .platforms-primary {
+    font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+    max-width: 880px;
+  }
+  .platforms-primary::before {
+    font-size: 6rem;
+    left: -8px;
+    top: -50px;
+  }
+  .platforms-secondary {
+    font-size: clamp(1.02rem, 1.5vw, 1.3rem);
+    max-width: 640px;
+    color: var(--text-muted);
+  }
+  .platforms-secondary::before {
+    font-size: 4rem;
+    left: -4px;
+    top: -32px;
+    opacity: 0.4;
+  }
+  .platforms-attrib {
+    text-align: center;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .platforms-attrib strong {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.16em;
+  }
+  .platforms-attrib .role {
+    display: block;
+    color: var(--text-muted);
+    letter-spacing: 0.14em;
+  }
+  .platforms-attrib .src {
+    display: block;
+    margin-top: 12px;
+    color: var(--text-dim);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    opacity: 0.85;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    text-decoration: none;
+  }
+  .platforms-attrib .src:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    opacity: 1;
+  }
+  .platforms-attrib-secondary { font-size: 0.74rem; }
+  .platforms-attrib-secondary strong {
+    font-size: 0.78rem;
+  }
+  .platforms-divider {
+    width: 56px;
+    height: 1px;
+    background: var(--border-strong);
+    margin: 84px auto 70px;
+    opacity: 0.7;
+  }
+
+    /* Categories — when shipped vs. when named */
+  #categories {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-rows { margin-top: 0; }
+  .cat-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 0.85fr);
+    align-items: baseline;
+    gap: 32px;
+    padding: 30px 0;
+    border-top: 1px solid var(--border);
+  }
+  .cat-row:last-child { border-bottom: 1px solid var(--border); }
+  .cat-shipped, .cat-named { display: flex; flex-direction: column; }
+  .cat-year { font-family: var(--serif); font-size: 1.7rem; color: var(--accent); font-weight: 600; letter-spacing: 0.02em; margin-bottom: 4px; line-height: 1.1; }
+  .cat-what { font-size: 0.95rem; color: var(--text); font-weight: 500; line-height: 1.45; }
+  .cat-where { font-size: 0.76rem; color: var(--text-dim); letter-spacing: 0.06em; margin-top: 4px; }
+  .cat-arrow { color: var(--text-dim); font-size: 1.1rem; font-style: normal; opacity: 0.5; align-self: center; padding: 0 12px; }
+  .cat-named { text-align: right; }
+  .cat-name { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 4px; line-height: 1.3; }
+  .cat-named-year { font-size: 0.74rem; color: var(--text-dim); letter-spacing: 0.14em; text-transform: uppercase; }
+  @media (max-width: 720px) {
+    .cat-row { grid-template-columns: 1fr; gap: 14px; padding: 24px 0; }
+    .cat-arrow { display: none; }
+    .cat-named { text-align: left; border-left: 2px solid var(--border-strong); padding-left: 16px; opacity: 0.85; }
+  }
+
+  /* On Record */
+  .record-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 50px;
+  }
+  @media (max-width: 860px) { .record-row { grid-template-columns: 1fr; } }
+  .record-col {
+    padding: 32px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+  }
+  .record-col:hover { border-color: var(--border-strong); }
+  .record-col .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .record-list { list-style: none; }
+  .record-list li {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.45;
+  }
+  .record-list li:first-child { border-top: none; padding-top: 0; }
+  .record-list li .meta {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+  .record-list a { color: var(--text); border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+  .record-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Recognition strip */
+  #recognition { padding: 80px 0; }
+  .awards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 48px;
+  }
+  .award {
+    background: var(--bg-elev);
+    padding: 32px 28px;
+    transition: background 0.3s ease;
+  }
+  .award:hover { background: var(--bg-card); }
+  .award .award-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .award .award-by {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Contact */
+  #contact { padding: 130px 0 100px; text-align: center; }
+  #contact h2 { margin-bottom: 24px; }
+  #contact .lead { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 48px; }
+  .contact-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+  }
+  .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  .contact-link svg { width: 16px; height: 16px; opacity: 0.8; }
+
+  /* Footer */
+  footer {
+    padding: 36px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+  footer span { color: var(--accent); }
+
+  /* Mobile tuning */
+  @media (max-width: 600px) {
+    section { padding: 80px 0; }
+    #hero { padding: 120px 0 60px; }
+    .timeline-item { padding-left: 50px; padding-bottom: 44px; }
+    .org-block { padding-left: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container">
+    <div class="logo">Virendra <span>Pal</span></div>
+    <ul class="nav-links">
+      <li><a href="#spine">The Spine</a></li>
+      <li><a href="#now">Now</a></li>
+      <li><a href="#orgs">Orgs Built</a></li>
+      <li><a href="#record">On Record</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section id="hero">
+  <div class="container">
+    <span class="eyebrow reveal">Chief AI Officer · LenDenClub</span>
+    <h1 class="reveal">Sixteen years in regulated finance.<br><em>Two AI organisations built from zero.</em></h1>
+    <p class="hero-tagline reveal">Currently Chief AI Officer at LenDenClub. Previously built and led the data science org at SMEcorner (now Ambit Finvest) — three internal promotions in 16 months, 25-person team at peak. Earlier across pharma analytics at WNS (GSK), insurance and wealth at Edelweiss, BFSI consulting at Cedar (IndusInd, Dubai Islamic Bank, Abu Dhabi Commercial Bank), and methodology at Nielsen.</p>
+    <div class="hero-meta reveal">
+      <span class="pill"><strong>16Y</strong> in Credit, Fraud &amp; Risk AI</span>
+      <span class="pill"><strong>2</strong> AI orgs from zero</span>
+      <span class="pill"><strong>17</strong> public talks · 2023–25</span>
+      <span class="pill"><strong>BW CDAIO 2025</strong> Power Speaker</span>
+    </div>
+    <div class="hero-cta reveal">
+      <a href="#spine" class="btn btn-primary">See the Spine
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/virendrapal/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section id="thesis">
+  <div class="container">
+    <p class="thesis-quote reveal">Trust isn't built on promise. It's <em>engineered through consistent execution</em> and validated outcomes. In financial services, trust isn't simply a feature — it's the infrastructure on which all value is built.</p>
+    <p class="thesis-attrib reveal">— Virendra Pal · LinkedIn · May 2025</p>
+  </div>
+</section>
+
+<section id="spine">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">The Spine</span>
+      <h2 class="reveal">Twelve chapters. Each one shipped a system that named a category later.</h2>
+      <p class="reveal">Each entry has a year, a system, and the company. The category-naming column is one section down.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2011 — 2013</span>
+        <h3>PowerPoint deck-automation macro at WNS</h3>
+        <div class="where">WNS · GSK Commercial Analytics · Delhi</div>
+        <p>Analyst on the GSK commercial analytics account. Built a deck-automation macro that compressed weekly forecasting reports from days to hours across 60+ countries. Cut the team's weekly workload by 80%.</p>
+        <span class="ahead">Ahead — automation thinking before "RPA" was a category</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2013 — 2014</span>
+        <h3>AutoML — built and deployed at Abu Dhabi Commercial Bank</h3>
+        <div class="where">Cedar Management Consulting Intl · Pune</div>
+        <p>An automated machine-learning pipeline for cross-sell, retention, and up-sell — built and deployed at Abu Dhabi Commercial Bank. Same year DataRobot launched (2013). Five years before Google Cloud AutoML (2018).</p>
+        <span class="ahead">Ahead — production AutoML before AutoML was a term</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2014 — 2015</span>
+        <h3>Concept Optimizer — 200+ R functions</h3>
+        <div class="where">Nielsen · Mumbai</div>
+        <p>Methodology library adopted across pharmaceutical and FMCG modeling teams: latent-class regression, hierarchical Bayes, Shapley-value regression, multistage clustering for drug-launch sequencing. Awarded <strong>Employee of the Year for Innovation</strong>.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2015 — 2016</span>
+        <h3>Daily statistical models for unauthorized trade detection — live in production</h3>
+        <div class="where">Aditya Birla Financial Services Group · Mumbai</div>
+        <p>First leadership role — 8 specialists. Models running daily on the broking platform. Customer-sensitivity index. Case-outcome prediction with text mining on legal allegations. Awarded <strong>Best Functional Team</strong> across ABFSG.</p>
+        <span class="ahead">Ahead — text mining for legal-outcome prediction in 2015</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2016 — 2017</span>
+        <h3>AI-assisted insurance advisor + email cognitive tagger + news-mining engine</h3>
+        <div class="where">Edelweiss Financial Services · Mumbai</div>
+        <p>Twelve people. Recommendation engine guiding insurance advisors live. Cognitive email classification at scale for compliance and routing. News-mining for trade signals at Global Wealth Management. Fraud claims model and persistency model for the insurance arm.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2017 — 2018</span>
+        <h3>KYC OCR + GAN-based document reconstruction</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai</div>
+        <p>Loan files arrived with signatures, stamps, and ink marks across critical numbers. Built a custom computer-vision pipeline that removed the artifacts and reconstructed the underlying image with a generative adversarial network — then ran financial calculations on the cleaned output.</p>
+        <span class="ahead">Ahead — GANs in production fintech, 2018</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2018 — 2020</span>
+        <h3>Alternate-data underwriting at SMEcorner</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai</div>
+        <p>Risk, pricing, and fraud intelligence built on alternate signals — mobile phone age, OS version, screen-swiping patterns, app usage, SMS, location, utility, payment-gateway, government and healthcare data — to underwrite MSME borrowers without conventional financials. The "data points" the lending market now talks about, sourced and operationalised then.</p>
+        <span class="ahead">Ahead — alternate-data lending in regulated credit, 2018</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2019 — 2020</span>
+        <h3>Intelligent document capture for unstructured MSME financials</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai</div>
+        <p>Unaudited P&amp;Ls and capital-account statements with no two formats alike — different industries, different naming conventions. Built word-level OCR feeding a domain-specific NLP normalisation layer. <strong>90% automation. 75% accuracy on financial extraction.</strong></p>
+        <span class="ahead">Ahead — document AI before Perfios competitors arrived</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2019 — 2020</span>
+        <h3>Voice-based PD Summary + pre-PD inconsistency question generator</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai</div>
+        <p>Recorded the underwriter–shopkeeper personal discussion, transcribed it, extracted the underwriting-relevant signal, generated the assessment memo. Cross-referenced bureau and banking data to surface contradictions <em>before</em> the PD even started — generating the question list the underwriter should ask.</p>
+        <span class="ahead">Ahead — agentic reasoning across structured sources, 2020</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2020 — 2021</span>
+        <h3>Multimodal sentiment analysis for credit underwriting</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai</div>
+        <p>Face, voice pitch, NLP text — triangulated to detect when what's said, how it's said, and what's shown disagree. Applied as a framework underwriting signal.</p>
+        <span class="ahead">Ahead — multimodal AI for credit underwriting, 2021</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2017 — 2022</span>
+        <h3>C.A.R.T. — Credit Assessment &amp; Robotics Transformation</h3>
+        <div class="where">SMEcorner (now Ambit Finvest) · Mumbai · Chief Innovation &amp; Analytics Officer</div>
+        <p>Three internal promotions in 16 months — Principal Data Scientist → Head of Analytics &amp; Data Science → Chief Innovation and Analytics Officer. Built and led a 25-person specialist organisation across NLP, Computer Vision, Deep Learning, Speech, MLOps, BI and Data Engineering. C.A.R.T. became the platform on which the credit operation ran.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="dot"></div>
+        <span class="year">2024 — 2026</span>
+        <h3>Multi-agent platforms — agentic underwriting, collections, voice</h3>
+        <div class="where">LenDenClub · Mumbai · Chief AI Officer</div>
+        <p>Founded the LenDenClub AI Innovation Hub. Shipped multi-agent decisioning across the lending lifecycle — agentic underwriting, agentic collections, an LLM-powered voice platform. Auditability, reason-code emission, and kill-switches built into every agent on day one. <em>Power Speaker, BW Chief Data and AI Officers Conclave 2025.</em></p>
+        <span class="ahead">Ahead — multi-agent AI in regulated lending, today</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">Categories</span>
+      <h2 class="reveal">Shipped first. Categorised later.</h2>
+      <p class="reveal">No commentary. The dates make the case.</p>
+    </div>
+    <div class="cat-rows">
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2013</span>
+          <span class="cat-what">AutoML pipeline deployed at Abu Dhabi Commercial Bank</span>
+          <span class="cat-where">Cedar Management Consulting · for ADCB</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"AutoML"</span>
+          <span class="cat-named-year">named ~2017</span>
+        </div>
+      </div>
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2017</span>
+          <span class="cat-what">GAN-based document reconstruction in production lending</span>
+          <span class="cat-where">SMEcorner</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"Document AI"</span>
+          <span class="cat-named-year">mainstream ~2022</span>
+        </div>
+      </div>
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2018</span>
+          <span class="cat-what">Alternate-data underwriting — mobile, OS, swipe, app, SMS, payment-gateway</span>
+          <span class="cat-where">SMEcorner</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"Alternate-data lending"</span>
+          <span class="cat-named-year">mainstream ~2022</span>
+        </div>
+      </div>
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2019</span>
+          <span class="cat-what">Voice-based PD summary — record, transcribe, extract, memo</span>
+          <span class="cat-where">SMEcorner</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"Voice AI" / "Meeting AI"</span>
+          <span class="cat-named-year">mainstream 2023–24</span>
+        </div>
+      </div>
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2020</span>
+          <span class="cat-what">Multimodal sentiment for credit underwriting — face, voice pitch, text</span>
+          <span class="cat-where">SMEcorner</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"Multimodal AI for credit"</span>
+          <span class="cat-named-year">still emerging</span>
+        </div>
+      </div>
+
+      <div class="cat-row reveal">
+        <div class="cat-shipped">
+          <span class="cat-year">2024</span>
+          <span class="cat-what">Multi-agent decisioning across underwriting, collections, voice</span>
+          <span class="cat-where">LenDenClub</span>
+        </div>
+        <span class="cat-arrow">&rarr;</span>
+        <div class="cat-named">
+          <span class="cat-name">"Agentic AI in regulated finance"</span>
+          <span class="cat-named-year">named 2024–25</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="now">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">Now Shipping</span>
+      <h2 class="reveal">Three platforms. One agentic operating model.</h2>
+      <p class="reveal">Multi-agent decisioning across underwriting, collections, and voice — running in production at LenDenClub.</p>
+    </div>
+    <div class="now-grid">
+      <div class="now-card reveal">
+        <div class="num">01</div>
+        <h3>Agentic Underwriting</h3>
+        <p>Multi-agent decisioning across KYC, document intelligence, bureau-banking reconciliation, risk scoring, and policy reasoning. Every agent hand-off emits an immutable reason-code payload — readable by the risk committee and by the regulator.</p>
+      </div>
+      <div class="now-card reveal">
+        <div class="num">02</div>
+        <h3>Agentic Collections</h3>
+        <p>LLM-driven collections orchestration with intent detection, channel-aware sequencing, and predictive intervention. Human-in-the-loop escapes at any confidence below set thresholds.</p>
+      </div>
+      <div class="now-card reveal">
+        <div class="num">03</div>
+        <h3>Voice Platform</h3>
+        <p>Production voice AI across the lending lifecycle — speech-to-intent, real-time multilingual, sentiment-aware, action routing. Builds directly on the multimodal sentiment work shipped at SMEcorner in 2021.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="orgs">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">Orgs Built From Zero</span>
+      <h2 class="reveal">Two AI organisations. Both started with no AI function.</h2>
+      <p class="reveal">One built between 2017 and 2022. The other from 2022 to today.</p>
+    </div>
+    <div class="orgs-row">
+
+      <div class="org-block reveal">
+        <div class="label">2017 — 2022</div>
+        <h3>SMEcorner (now Ambit Finvest)</h3>
+        <div class="duration">Chief Innovation &amp; Analytics Officer · Mumbai</div>
+        <p>Joined as Principal Data Scientist. Promoted to Head, Analytics &amp; Data Science within five months. Promoted to Chief Innovation &amp; Analytics Officer eleven months later.</p>
+        <div class="promotions"><span>Principal DS</span> → <span>Head A&amp;DS</span> → <span>Chief I&amp;AO</span> · <em>16 months</em></div>
+        <ul>
+          <li>25-person specialist org across NLP, CV, Deep Learning, Speech, MLOps, BI, Data Engineering</li>
+          <li>Vertical AI platform for SME credit underwriting — KYC OCR, GAN reconstruction, IDC, voice PD, multimodal sentiment, scorecards</li>
+          <li>C.A.R.T. — internal product naming the operating platform</li>
+          <li>Award: Best Industry Application in Financial Services · Big Data Analytics Summit</li>
+          <li>Mumbai Fintech Award 2019 · Singapore Fintech Festival Top 20</li>
+        </ul>
+      </div>
+
+      <div class="org-block reveal">
+        <div class="label">2022 — Present</div>
+        <h3>LenDenClub</h3>
+        <div class="duration">Chief AI Officer · Mumbai</div>
+        <p>Joined to make AI the decision engine, not a dashboard feature. Stood up the data science function as a startup within a startup. Founded the LenDenClub AI Innovation Hub in 2025.</p>
+        <div class="promotions"><span>Chief Data Science Officer</span> → <span>Chief AI Officer</span></div>
+        <ul>
+          <li>Multi-agent platforms shipping into core lending operations — underwriting, collections, voice</li>
+          <li>AI Innovation Hub — fresh-talent intake from RGIT Mumbai + experienced AI engineers</li>
+          <li>Power Speaker · BW Chief Data and AI Officers Conclave 2025 (Taj Santacruz)</li>
+          <li>Speaker · ObserveNow CXO Roundtable (Persistent + Google Cloud)</li>
+          <li>Featured · Global Fintech Festival 2025 · Elets Digital Natives Summits 2024 · DAICON Quantum AI</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="vouched">
+  <div class="container">
+    <span class="eyebrow reveal">Vouched</span>
+    <blockquote class="vouch-quote reveal">He successfully utilized AI and machine learning to develop models that revolutionized our operations. His work in automated underwriting and the elimination of manual processes&hellip; led to significant efficiency gains and superior outcomes.</blockquote>
+    <p class="vouch-attrib reveal">
+      <strong>Nilesh Challawar</strong>
+      <span class="role">Portfolio Head &middot; Axis Bank</span>
+      <span class="rel">Former colleague, LenDenClub &middot; June 2024</span>
+    </p>
+
+    <div class="vouch-divider reveal"></div>
+
+    <blockquote class="vouch-quote vouch-secondary reveal">His work on analytics models for various business of Edelweiss was unanimously appreciated both by business leads and enterprise leads.</blockquote>
+    <p class="vouch-attrib vouch-attrib-secondary reveal">
+      <strong>Deepanjan Dey</strong>
+      <span class="role">Data Strategy &amp; Engineering &middot; SBI Mutual Fund</span>
+      <span class="rel">Senior colleague, Edelweiss &middot; July 2017</span>
+    </p>
+  </div>
+</section>
+
+<section id="platforms">
+  <div class="container">
+    <span class="eyebrow reveal">On the platforms</span>
+    <p class="platforms-bridge reveal">From the companies' own public record.</p>
+
+    <blockquote class="platforms-quote platforms-primary reveal">Our platform now leverages 20&ndash;25 AI and ML models for credit assessment, borrower-lender matching, and collections&hellip; predictive models forecast repayment behaviour with 95&ndash;96% accuracy.</blockquote>
+    <p class="platforms-attrib platforms-attrib-primary reveal">
+      <strong>Dipesh Karki</strong>
+      <span class="role">Co-founder &amp; CTO &middot; LenDenClub</span>
+      <a class="src" href="https://invezz.com/news/2025/11/05/interview-dipesh-karki-on-lendenclubs-ai-strategy-profit-outlook-and-regulatory-challenges/" target="_blank" rel="noopener">Invezz &middot; November 2025</a>
+    </p>
+
+    <div class="platforms-divider reveal"></div>
+
+    <blockquote class="platforms-quote platforms-secondary reveal">SME Corner is one of India's leading modern-age fintech companies&hellip; through their state-of-the-art proprietary online platform that combines Artificial Intelligence, Machine Learning and Data Science.</blockquote>
+    <p class="platforms-attrib platforms-attrib-secondary reveal">
+      <strong>Ambit Finvest Group</strong>
+      <span class="role">Acquisition of SMEcorner</span>
+      <a class="src" href="https://www.ambit.co/public/Press%20Release_Ambit%20Finvest%20acquires%20SME%20Corner%20business.pdf" target="_blank" rel="noopener">Press release &middot; January 5, 2023</a>
+    </p>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">Operating Philosophy</span>
+      <h2 class="reveal">Four principles.</h2>
+      <p class="reveal">Each one traces back to specific systems shipped between 2011 and 2024.</p>
+    </div>
+    <div class="principles">
+
+      <div class="principle reveal">
+        <div class="num">01.</div>
+        <h3>Multi-agent AI is a governance choice <em>before</em> it is a technology choice.</h3>
+        <p>The reason to go multi-agent in regulated finance is auditability. When each step is a separate agent, every hand-off emits a reason code. The risk committee can walk the graph. The regulator can walk the graph. Build the graph as if it were the audit trail — because it is.</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="num">02.</div>
+        <h3>Decision economics outranks model accuracy.</h3>
+        <p>A four-point AUC lift can underperform the older model in P&amp;L. The marginal customers may be the ones already being rejected. Every model review starts with the business metric — rupees per disbursed loan, NPA at month six, approval rate at fixed risk ceiling — and uses statistical metrics as diagnostics, not goals.</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="num">03.</div>
+        <h3>Governance is not a tax on velocity. It is the only reason anyone trusts you enough to scale.</h3>
+        <p>Five documents before any Gen AI system ships: intended use, data provenance, evaluation plan, risk register, rollback plan. Three engineering days to write. The cost of not writing them is one regulatory letter or one bad headline. SR 11-7 has asked for most of this since 2011.</p>
+      </div>
+
+      <div class="principle reveal">
+        <div class="num">04.</div>
+        <h3>Build the people who build the AI.</h3>
+        <p>The true test of leadership is what your team becomes without you. Empower people to think, not depend on you for answers. Shape a culture that fixes problems, not blame. Leadership is not about answers — it is about the mindset you pass on.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="record">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">On Record</span>
+      <h2 class="reveal">Selected speaking, writing, and media.</h2>
+      <p class="reveal">All public, all dated. Links to source where available.</p>
+    </div>
+    <div class="record-row">
+
+      <div class="record-col reveal">
+        <div class="label">Speaking</div>
+        <ul class="record-list">
+          <li>BW Chief Data &amp; AI Officers Conclave 2025 — <em>Power Speaker</em><span class="meta">Taj Santacruz, Mumbai · Oct 2025 · Knowledge Partner: EY</span></li>
+          <li>ObserveNow CXO Leader's Roundtable<span class="meta">Persistent Systems &amp; Google Cloud · Aug 2025 · Mumbai</span></li>
+          <li>Global Fintech Festival 2025<span class="meta">GFF · Mumbai · 2025</span></li>
+          <li>DAICON — Quantum AI<span class="meta">Speaker · 2024</span></li>
+          <li>Elets 3rd Digital Natives Summit<span class="meta">"Turning Raw Data into Strategies" · Dec 2024 · Moderated by PwC</span></li>
+          <li>Elets 2nd Digital Natives Summit (Cybersecurity)<span class="meta">"Strategies for Securing Apps and APIs" · May 2024 · Moderated by EY</span></li>
+          <li>Quantic India Data Analytics &amp; AI Show<span class="meta">"Illuminating Insights in Every Byte" · Feb 2024</span></li>
+          <li>Banking Frontiers — Say Hi! To AI<span class="meta">Feb 2024 · GenAI in BFSI panel</span></li>
+          <li>ETBFSI — India's Financial Services Going AI-First<span class="meta">2025 · Panel</span></li>
+        </ul>
+      </div>
+
+      <div class="record-col reveal">
+        <div class="label">Writing</div>
+        <ul class="record-list">
+          <li><a href="https://cxotoday.com/ai/how-tech-innovations-are-defining-new-age-banking/" target="_blank" rel="noopener">How Tech Innovations are Defining New-Age Banking</a><span class="meta">CXOToday · Authored · Mar 2021</span></li>
+          <li><a href="https://www.linkedin.com/pulse/future-banking-automation-from-rpa-multi-agent-ai-systems-pal-ftmcf" target="_blank" rel="noopener">The Future of Banking Automation: From RPA to Multi-Agent AI Systems</a><span class="meta">LinkedIn · Oct 2024</span></li>
+          <li><a href="https://www.linkedin.com/pulse/unveiling-architectural-synergy-vlm-llm-deep-dive-ais-virendra-pal-zlxwf" target="_blank" rel="noopener">Architectural Synergy of VLM and LLM</a><span class="meta">LinkedIn · Oct 2024</span></li>
+          <li><a href="https://www.linkedin.com/pulse/decade-long-evolution-credit-card-fraud-detection-from-virendra-pal-lxphf" target="_blank" rel="noopener">The Decade-Long Evolution of Credit Card Fraud Detection</a><span class="meta">LinkedIn · Sep 2024</span></li>
+          <li>Learn, Unlearn, Relearn — Adaptive Predictive Modelling during Pandemic<span class="meta">LinkedIn · Sep 2020</span></li>
+          <li>Structural Equation Models for Predictive and Prescriptive Analysis<span class="meta">LinkedIn &middot; Sep 2020</span></li>
+        </ul>
+      </div>
+
+      <div class="record-col reveal">
+        <div class="label">Media &amp; Featured</div>
+        <ul class="record-list">
+          <li><a href="https://cio.eletsonline.com/article/turning-raw-data-into-strategies-that-fuel-business-advantage/73692/" target="_blank" rel="noopener">Turning Raw Data into Strategies that Fuel Business Advantage</a><span class="meta">Elets CIO Insights &middot; Quoted &middot; Dec 2024</span></li>
+          <li><a href="https://www.youtube.com/watch?v=BVLSVZhA_eM" target="_blank" rel="noopener">Strategies for Securing Apps and APIs</a><span class="meta">YouTube &middot; Panel video &middot; 2024</span></li>
+          <li><a href="https://www.youtube.com/watch?v=p9mHfqGYRcs" target="_blank" rel="noopener">Analytics: Splicing Data to Generate Alphas</a><span class="meta">YouTube &middot; 2024</span></li>
+          <li><a href="https://www.youtube.com/watch?v=wJm0s5OpVPY" target="_blank" rel="noopener">Panel: Illuminating Insights in Every Byte</a><span class="meta">YouTube &middot; Quantic India 2024</span></li>
+          <li>Mumbai BFSI Tech Symposium &middot; Top 1% Leaders<span class="meta">Flexi Roundtables &amp; OpsTree &middot; 2025</span></li>
+          <li>AegisTV &middot; AI &amp; Data Science in Fintech<span class="meta">Aegis School of Data Science</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="recognition">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow reveal">Recognition</span>
+      <h2 class="reveal">Selected awards, 2014&ndash;2025.</h2>
+    </div>
+    <div class="awards">
+      <div class="award reveal">
+        <div class="award-name">Mumbai Fintech Award</div>
+        <div class="award-by">2019 &middot; Winner &middot; Top 20 at Singapore Fintech Festival</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Best Industry Application in Financial Services</div>
+        <div class="award-by">Big Data Analytics &amp; Insights Summit</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Best Use of AI in Email Management</div>
+        <div class="award-by">Quantic India Data Analytics &amp; AI Show 2024 &middot; P2P Lending</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Functional Excellence Award</div>
+        <div class="award-by">Cross-functional impact at scale</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Simply Excellent &mdash; GOLD</div>
+        <div class="award-by">Awarded twice across years</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Best Functional Team</div>
+        <div class="award-by">Aditya Birla Financial Services Group</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Employee of the Year &mdash; Innovation</div>
+        <div class="award-by">Nielsen &middot; Modeling Community</div>
+      </div>
+      <div class="award reveal">
+        <div class="award-name">Top 1% Leaders &middot; BFSI Tech Symposium</div>
+        <div class="award-by">Flexi Roundtables &middot; 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <span class="eyebrow reveal">Contact</span>
+    <h2 class="reveal">Open to substantive conversations on agentic AI in regulated finance.</h2>
+    <p class="lead reveal">Boards, CTOs, and senior recruiters welcome. Direct line below.</p>
+    <div class="contact-links reveal">
+      <a href="mailto:virendrak.isme09@gmail.com" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+      <a href="https://www.linkedin.com/in/virendrapal/" target="_blank" rel="noopener" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/VirendrakumarPal" target="_blank" rel="noopener" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.99 0 1.98.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="logo" style="margin-bottom: 8px;">Virendra <span>Pal</span></div>
+    Mumbai, India &middot; <span>Last updated April 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var revealEls = document.querySelectorAll('.reveal');
+  var timelineItems = document.querySelectorAll('.timeline-item');
+  var timeline = document.getElementById('timeline');
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+    timelineItems.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('visible'); });
+    timelineItems.forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  function updateTimelineProgress(){
+    if (!timeline) return;
+    var rect = timeline.getBoundingClientRect();
+    var viewportCenter = window.innerHeight * 0.55;
+    var start = rect.top - viewportCenter;
+    var totalHeight = rect.height;
+    var progress = Math.max(0, Math.min(1, -start / totalHeight));
+    timeline.style.setProperty('--scroll-progress', (progress * 100) + '%');
+  }
+  function onScroll(){
+    if (window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    updateTimelineProgress();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateTimelineProgress, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
